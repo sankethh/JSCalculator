@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       
+        <title> Simple Calculator </title>
+         
+    </head>
+    <body>
+        <h1> Simple Calculator using JS</h1>
+        <div>
+            <form>
+                    Enter a number - <input  type="text" name="FirstNumber" placeholder="Enter a number" id="fNumber">
+                    Enter another number - <input  type="text" name="SecondNumber" placeholder="Enter another number" id="sNumber">
+        </div>
+            <div>            
+                    <input type="button" onClick="Sum()" Value="Add" />
+                     <input type="button" onClick="Difference()" Value="Subtract" />
+                     <input type="button" onClick="Product()" Value="Multiply" />
+                     <input type="button" onClick="Quotient()" Value="Divide" />
+                </form>  
+            </div>
+                <script>
+                    type="text/javascript" 
+
+                    function GetNumber()
+                    {
+                        num1= document.getElementById('fNumber').value;
+                        num2= document.getElementById('sNumber').value;
+                        
+                    }
+
+                    
+                    function Sum()
+                    {
+                        GetNumber();
+                        document.getElementById('result').innerHTML = +num1 + +num2 ;
+
+                    }
+                    function Difference()
+                    {
+                        GetNumber();
+                        document.getElementById('result').innerHTML = num1 - num2 ;
+
+                    }
+                    function Product()
+                    {
+                        GetNumber();
+                        document.getElementById('result').innerHTML = num1*num2 ;
+
+                    }
+                    function Quotient()
+                    {
+                        GetNumber();
+                        if(num2===0)
+                        {
+                            console.log("Infinity")
+                        }
+                    
+                        else
+                        {
+                            document.getElementById('result').innerHTML = num1/num2 ;
+                        }
+                    }   
+
+                    
+                </script>
+                
+                <div>
+                Result:
+                <span id="result">
+
+                </span>
+            </div>
+
+</body>
+
+</html>
+                            
+                   
